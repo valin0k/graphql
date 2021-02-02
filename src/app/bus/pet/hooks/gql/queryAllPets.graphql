@@ -1,0 +1,7 @@
+query allPets {
+    pets: allPets {
+        id
+        name
+        weight
+    }
+}
