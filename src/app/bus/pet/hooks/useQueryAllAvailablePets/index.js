@@ -5,4 +5,6 @@ const queryAllAvailablePets = loader('./queryAllAvailablePets.graphql')
 
 export const useQueryAllAvailablePets = () => {
   const [getAllAvailablePets, {loading, error, data}] = useLazyQuery(queryAllAvailablePets)
+
+  return { getAllAvailablePets, loading, error, pets: data && data.getAllAvailablePets }
 }
